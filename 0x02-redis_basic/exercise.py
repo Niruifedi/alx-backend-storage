@@ -16,7 +16,7 @@ class Cache():
         class constructor to instantiate redis connection
         """
         self._redis = redis.Redis()
-        self._redis.flushdb
+        self._redis.flushdb()
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """
