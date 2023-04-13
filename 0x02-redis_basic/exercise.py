@@ -24,6 +24,5 @@ class Cache():
         uuid as key
         """
         random = uuid4()
-        rand = str(random)
-        self._redis.set(rand, data)
-        return rand
+        self._redis.set(str(random), data)
+        return str(random)
